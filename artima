@@ -4,6 +4,9 @@ TARGET="$DESKTOP/articles"
 DEFAULT_ICON="pdf"
 FRAGS="--html --allow-local-files --image-scale 2"
 
+count=0
+number_of_displays=5
+
 
 # Function to get the value of config.
 function get_value() {
@@ -16,9 +19,11 @@ function get_value() {
     echo $value
 }
 
-for line in $(ls $TARGET | grep '.md$'); do
-    target="$TARGET/$line"
-    without_file_name=$(echo $line | cut -d '.' -f1)
+
+function main() {
+    # $1: Target markdown file name
+    target="$TARGET/$1"
+    without_file_name=$(echo $1 | cut -d '.' -f1)
     without_extension_path=$(echo $target | cut -d '.' -f1)
 
     # ---
@@ -58,4 +63,35 @@ for line in $(ls $TARGET | grep '.md$'); do
     else
         ic conv $DESKTOP/$without_file_name.pdf@$icon
     fi
-done
+}
+
+
+if [[ $1 = "head" ]]; then
+    for line in $(ls -tl $TARGET | grep '.md$' | awk '{print($NF)}'); do
+        if [ -n $2 ]; then
+            number_of_displays=$2
+        fi
+
+        if [ $count -eq $number_of_displays ]; then
+            break
+        fi
+        main $line
+        ((count=count+1))
+    done
+elif [[ $1 = "tail" ]]; then
+    for line in $(ls -trl $TARGET | grep '.md$' | awk '{print($NF)}'); do
+        if [ -n $2 ]; then
+            number_of_displays=$2
+        fi
+
+        if [ $count -eq $number_of_displays ]; then
+            break
+        fi
+        main $line
+        ((count=count+1))
+    done
+else
+    for line in $(ls $TARGET | grep '.md$'); do
+        main $line
+    done
+fi
