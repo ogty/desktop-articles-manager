@@ -5,7 +5,7 @@ $ source setup.sh
 $ source main.sh
 ```
 
-**~/Desktop/articles/*.md**
+**~/Desktop/articles/xxx.md**
 
 ```md
 ---
