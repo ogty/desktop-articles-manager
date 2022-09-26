@@ -1,3 +1,5 @@
+#!/bin/sh
+
 currentDirectory=$(cd $(dirname $0);pwd)
 echo 'export PATH="$PATH:'$currentDirectory\" >> ~/.zshrc
 source ~/.zshrc

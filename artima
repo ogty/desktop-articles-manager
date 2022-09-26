@@ -1,3 +1,5 @@
+#!/bin/sh
+
 THIS_DIR=$(cd $(dirname $0); pwd)
 DESKTOP="$HOME/Desktop"
 TARGET="$DESKTOP/articles"
