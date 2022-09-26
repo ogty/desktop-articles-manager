@@ -55,9 +55,9 @@ theme: "gaia"
 
 ## 📍 Items that can be specified
 
-| Key    | Value   | Description                             |
-| ------ | ------- | --------------------------------------- |
-| icon   | string  | Icon name of PDF file                   |
-| marp   | boolean | Whether to create in Marp               |
-| create | boolean | Whether to create it in the first place |
-| theme  | string  | Marp Theme                              |
+| Key    | Value   | Description                                                                                       |
+| ------ | ------- | ------------------------------------------------------------------------------------------------- |
+| icon   | string  | Icon name of PDF file. [Icon name that can be specified](https://github.com/ogty/iconic-commands) |
+| marp   | boolean | Whether to create in Marp                                                                         |
+| create | boolean | Whether to create it in the first place                                                           |
+| theme  | string  | Marp Theme                                                                                        |
