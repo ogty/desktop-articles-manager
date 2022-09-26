@@ -16,3 +16,13 @@ icon: "docker-original"
 
 > **Note**<br />
 > If `icon` is not specified, the `pdf` icon will be displayed.
+
+## When using Marp
+
+```md
+---
+icon: "docker-original"
+marp: true
+---
+# Articles about Docker
+```
