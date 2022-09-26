@@ -32,7 +32,7 @@ icon: "docker-original"
 > **Note**<br />
 > If `icon` is not specified, the `pdf` icon will be displayed.
 
-## <img src="https://avatars.githubusercontent.com/u/20685754?s=200&v=4" width="2.5%" /> When using Marp
+## <img src="https://avatars.githubusercontent.com/u/20685754?s=200&v=4" width="2.8%" /> When using Marp
 
 ```md
 ---
