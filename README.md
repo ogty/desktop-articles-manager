@@ -15,7 +15,7 @@ $ source ./desktop-articles-manager.git/setup.sh
 ## 📖 Usage
 
 ```zsh
-$ artima
+$ artima # All files are eligible
 $ artima head 3
 $ artima tail 2
 ```
