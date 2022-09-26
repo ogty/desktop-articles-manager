@@ -1,2 +1,1 @@
-npm install --global md-to-pdf
-npm install --global @marp-team/marp-cli
+npm install --global md-to-pdf @marp-team/marp-cli
