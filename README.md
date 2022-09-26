@@ -23,6 +23,17 @@ icon: "docker-original"
 ---
 icon: "docker-original"
 marp: true
+theme: "gaia"
 ---
 # Articles about Docker
 ```
+
+> **Note**<br />
+> By preparing your own CSS design file directly under `marp`,<br />
+> you can set the file name to theme and that design will be applied.
+> ```md
+> ---
+> marp: true
+> theme: "dracula"
+> ---
+> ```
