@@ -64,14 +64,14 @@
 # Items that can be specified
 # ██████████████████████████▓▒░
 #
-#     ┌────────┬─────────┬─────────────────────────────────────────┐
-#     │ Key    │ Value   │ Description                             │
-#     ├────────┼─────────┼─────────────────────────────────────────┤
-#     │ icon   │ string  │ Icon name of PDF file*1                 │
-#     │ marp   │ boolean │ Whether to create in Marp               │
-#     │ create │ boolean │ Whether to create it in the first place │
-#     │ theme  │ string  │ Marp Theme                              │
-#     └────────┴─────────┴─────────────────────────────────────────┘
+#     ┌───────────┬───────────┬────────────────────────────────────────────┬──────────────────┐
+#     │  Key      │  Value    │  Description                               │  Default value   |
+#     ├───────────┼───────────┼────────────────────────────────────────────┼──────────────────┤
+#     │  icon     │  string   │  Icon name of PDF file*1                   │  pdf             │
+#     │  marp     │  boolean  │  Whether to create in Marp                 │  false           │
+#     │  create   │  boolean  │  Whether to create it in the first place   │  true            │
+#     │  theme    │  string   │  Marp Theme                                │  -               │
+#     └───────────┴───────────┴────────────────────────────────────────────┴──────────────────┘
 #
 #
 # *1: Icon name that can be specified. https://github.com/ogty/iconic-commands
