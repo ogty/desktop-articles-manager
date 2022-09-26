@@ -34,7 +34,7 @@ for line in $(ls $TARGET | grep '.md$'); do
         else
             theme_path="$THIS_DIR/marp/$marp_theme.css"
             if [ -e $theme_path ]; then
-                marp --pdf $target --theme $theme_path --html --allow-local-files --image-scale 2
+                marp --pdf $target --theme $theme_path $FRAGS
             else
                 marp --pdf $target $FRAGS
             fi

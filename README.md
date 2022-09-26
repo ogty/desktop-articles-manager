@@ -1,17 +1,21 @@
 <h1 align="center">Desktop Articles Manager</h1>
 
+<div>
+  <img src="./sample/sample.png" alt="sample image" />
+</div>
+
 ```zsh
 $ source setup.sh
 $ source main.sh
 ```
 
-**~/Desktop/articles/xxx.md**
+**~/Desktop/articles/articles_about_docker.md**
 
 ```md
 ---
 icon: "docker-original"
 ---
-# Articles about Docker
+# Articles About Docker
 ```
 
 > **Note**<br />
@@ -25,7 +29,7 @@ icon: "docker-original"
 marp: true
 theme: "gaia"
 ---
-# Articles about Docker
+# Articles About Docker
 ```
 
 > **Note**<br />
