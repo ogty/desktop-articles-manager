@@ -4,10 +4,21 @@
   <img src="./sample/sample.png" alt="sample image" />
 </div>
 
+## ⚙️ Setup
+
 ```zsh
-$ source setup.sh
+$ cd ~/
+$ git clone https://github.com/ogty/desktop-articles-manager.git
+$ source ./desktop-articles-manager.git/setup.sh
+```
+
+## 📖 Usage
+
+```zsh
 $ source main.sh
 ```
+
+## ✏️ Example
 
 **~/Desktop/articles/articles_about_docker.md**
 
@@ -41,3 +52,12 @@ theme: "gaia"
 > theme: "dracula"
 > ---
 > ```
+
+## 📍 Items that can be specified
+
+| Key    | Value   | Description                             |
+| ------ | ------- | --------------------------------------- |
+| icon   | string  | Icon name of PDF file                   |
+| marp   | boolean | Whether to create in Marp               |
+| create | boolean | Whether to create it in the first place |
+| theme  | string  | Marp Theme                              |

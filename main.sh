@@ -23,16 +23,22 @@ for line in $(ls $TARGET | grep '.md$'); do
 
     # ---
     icon=$(get_value $target icon)
-    is_marp=$(get_value $target marp)
-    marp_theme=$(get_value $target theme)
+    marp=$(get_value $target marp)
+    theme=$(get_value $target theme)
+    create=$(get_value $target create)
     # ---
 
+    # If create is false, no PDF file is created.
+    if [[ $create = false ]]; then
+        continue
+    fi
+
     # PDF file generation
-    if [[ $is_marp = true ]]; then # Generation and theming in Marp
-        if [ -z $marp_theme ]; then
+    if [[ $marp = true ]]; then # Generation and theming in Marp
+        if [ -z $theme ]; then
             marp --pdf $target $FRAGS
         else
-            theme_path="$THIS_DIR/marp/$marp_theme.css"
+            theme_path="$THIS_DIR/marp/$theme.css"
             if [ -e $theme_path ]; then
                 marp --pdf $target --theme $theme_path $FRAGS
             else
